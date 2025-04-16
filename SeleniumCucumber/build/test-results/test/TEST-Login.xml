@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-04-16T07:57:12" hostname="LAPTOP-JEC6DRN0" time="8.375">
+  <properties/>
+  <testcase name="Login with valid data" classname="Login" time="4.851"/>
+  <testcase name="Login with invalid data" classname="Login" time="3.523"/>
+  <system-out><![CDATA[
+@login @valid-login
+Scenario: Login with valid data               ?[90m# src/test/resources/features/login.feature:5?[0m
+  ?[32mGiven ?[0m?[32muser on the home page?[0m                 ?[90m# stepDevinitions.LoginStepDef.onTheLoginPage()?[0m
+  ?[32mWhen ?[0m?[32muser input ?[0m?[32m?[1m"standard_user"?[0m?[32m as username?[0m ?[90m# stepDevinitions.LoginStepDef.inputUsername(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32muser input ?[0m?[32m?[1m"secret_sauce"?[0m?[32m as password?[0m   ?[90m# stepDevinitions.LoginStepDef.inputPassword(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32muser will redirect to home page?[0m        ?[90m# stepDevinitions.LoginStepDef.verifyTheHomePage()?[0m
+
+@login @invalid-login
+Scenario: Login with invalid data             ?[90m# src/test/resources/features/login.feature:12?[0m
+  ?[32mGiven ?[0m?[32muser on the home page?[0m                 ?[90m# stepDevinitions.LoginStepDef.onTheLoginPage()?[0m
+  ?[32mWhen ?[0m?[32muser input ?[0m?[32m?[1m"standard_user"?[0m?[32m as username?[0m ?[90m# stepDevinitions.LoginStepDef.inputUsername(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32muser input ?[0m?[32m?[1m"wrong_password"?[0m?[32m as password?[0m ?[90m# stepDevinitions.LoginStepDef.inputPassword(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32muser stays on login page?[0m               ?[90m# stepDevinitions.LoginStepDef.onTheLoginPage()?[0m
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>

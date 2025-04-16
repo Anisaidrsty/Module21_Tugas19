@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="User Login" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-16T07:57:20" hostname="LAPTOP-JEC6DRN0" time="3.17">
+  <properties/>
+  <testcase name="Login with empaty data" classname="User Login" time="3.17"/>
+  <system-out><![CDATA[
+@login_boundary @login_boundary_empaty_data
+Scenario Outline: Login with empaty data ?[90m# src/test/resources/features/login_boundary.feature:12?[0m
+  ?[32mGiven ?[0m?[32muser on the home page?[0m            ?[90m# stepDevinitions.LoginStepDef.onTheLoginPage()?[0m
+  ?[32mWhen ?[0m?[32muser input ?[0m?[32m?[1m""?[0m?[32m as username?[0m         ?[90m# stepDevinitions.LoginStepDef.inputUsername(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32muser input ?[0m?[32m?[1m""?[0m?[32m as password?[0m          ?[90m# stepDevinitions.LoginStepDef.inputPassword(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32muser stays on login page?[0m          ?[90m# stepDevinitions.LoginStepDef.onTheLoginPage()?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
