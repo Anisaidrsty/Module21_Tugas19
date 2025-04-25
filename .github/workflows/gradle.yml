@@ -38,7 +38,9 @@ jobs:
           ./gradlew build   # Run the build task before tests
 
       - name: Run Tests
-        run: ./gradlew clean test  # Run tests after the build step
+        run: |
+          cd SeleniumCucumber # Masuk ke folder project
+          ./gradlew clean test  # Run tests after the build step
 
       - name: Archive test results
         uses: actions/upload-artifact@v4.3.0
