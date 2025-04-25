@@ -9,8 +9,10 @@ public class Utility {
     public static WebDriver webDriver;
 
     public static void startWebDriver(){
-        WebDriverManager.chromedriver().setup();
-        webDriver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless"); // For CI CD
+        options.addArguments("window-size=1920,1080");
+        webDriver = new ChromeDriver(options);
         webDriver .manage().window().fullscreen();
         webDriver.get("https://www.saucedemo.com/");
     }
