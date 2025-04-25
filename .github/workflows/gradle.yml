@@ -33,6 +33,7 @@ jobs:
 
       - name: Build with Gradle
         run: |
+          cd SeleniumCucumber # Masuk ke folder project
           chmod +x gradlew  # Make gradlew executable
           ./gradlew build   # Run the build task before tests
 
@@ -47,9 +48,9 @@ jobs:
           path: SeleniumCucumber/reports/cucumber-report.html  # Path to test reports
 
        # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4.0.0
-        with:
-          personal_token: ${{ secrets.PAT }}
-          publish_dir: target
+      # - name: Deploy to GitHub Pages
+      #   if: always()
+      #   uses: peaceiris/actions-gh-pages@v4.0.0
+      #   with:
+       #    personal_token: ${{ secrets.PAT }}
+       #    publish_dir: target
